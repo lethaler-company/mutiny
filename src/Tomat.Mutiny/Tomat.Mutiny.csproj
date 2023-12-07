@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <CopyLocalLockFileAssembles>true</CopyLocalLockFileAssembles>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Tomat.Mutiny.Loader.API\Tomat.Mutiny.Loader.API.csproj"/>
+    </ItemGroup>
+
+</Project>
