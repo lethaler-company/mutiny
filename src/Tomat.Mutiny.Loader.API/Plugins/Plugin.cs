@@ -10,11 +10,6 @@ namespace Tomat.Mutiny.Loader.API.Plugins;
 /// </summary>
 public interface IPlugin {
     /// <summary>
-    ///     The plugin metadata.
-    /// </summary>
-    PluginMetadata Metadata { get; set; }
-
-    /// <summary>
     ///     Called when the plugin is first loaded.
     /// </summary>
     /// <param name="runtime">The runtime environment.</param>

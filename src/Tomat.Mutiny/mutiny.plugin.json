@@ -1,28 +1,33 @@
 ﻿{
   "schemaVersion": 1,
   "id": "dev.tomat.mutiny",
-  "version": {
-    "useAssembly": true
-  },
+  "version": "1.0.0",
   "metadata": {
     "name": "Mutiny",
-    "description": "Base Mutiny loader plugin.",
     "contact": {
-      "email": "xxlennygamerxx@gmail.com",
       "homepage": "https://github.com/lethaler-company/mutiny",
       "issues": "https://github.com/lethaler-company/mutiny/issues",
       "sources": "https://github.com/lethaler-company/mutiny"
     },
     "authors": [
-      "tomat"
+      {
+        "name": "tomat",
+        "contact": {
+          "email": "xxlennygamerxx@gmail.com",
+          "homepage": "https://tomat.dev"
+        }
+      }
     ],
     "contributors": []
   },
   "dependencies": {
-    "provides": [
-      "dev.tomat.mutiny"
+    "provides": [],
+    "depends": [
+      {
+        "name": "dev.tomat.example",
+        "version": "1.0.0"
+      }
     ],
-    "depends": [],
     "recommends": [],
     "suggests": [],
     "breaks": [],
