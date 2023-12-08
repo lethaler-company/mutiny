@@ -33,6 +33,7 @@
     "breaks": [],
     "conflicts": []
   },
+  "etc": {},
   "plugin": {
     "entrypoints": [
       "Tomat.Mutiny.MutinyPlugin"

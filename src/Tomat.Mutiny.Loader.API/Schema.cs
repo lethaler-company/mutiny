@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Tomat.Mutiny.Loader.API;
 
-/// <summary>
-///     An abstract schema object.
-/// </summary>
-public abstract class Schema<T> {
+public abstract class Schema {
     public sealed class SchemaMetadata {
         [JsonProperty("name")]
         public string Name { get; set; } = string.Empty;
@@ -75,6 +74,32 @@ public abstract class Schema<T> {
     [JsonProperty("dependencies")]
     public SchemaDependencies Dependencies { get; set; } = new();
 
-    [JsonIgnore]
-    public T? Object { get; set; }
+    [JsonProperty("etc")]
+    private Dictionary<string, object?> Etc { get; set; } = new();
+
+    public static bool TryParse<T>(string json, [NotNullWhen(returnValue: true)] out T? schema) where T : Schema {
+        schema = null;
+
+        try {
+            var jObject = JObject.Parse(json);
+            if (!jObject.TryGetValue("schemaVersion", out var schemaVersionToken)) {
+                return false;
+            }
+
+            if (schemaVersionToken.Type != JTokenType.Integer)
+                return false;
+
+            // Currently only 1 version, so we don't bother with special
+            // parsing.
+            var schemaVersion = schemaVersionToken.Value<int>();
+            if (schemaVersion != 1)
+                return false;
+
+            schema = jObject.ToObject<T>();
+            return schema is not null;
+        }
+        catch {
+            return false;
+        }
+    }
 }
