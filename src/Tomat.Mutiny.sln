@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Mutiny.Loader.API", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Mutiny", "Tomat.Mutiny\Tomat.Mutiny.csproj", "{0A4C97FE-C0C3-495C-A15E-EEAAE06FC63C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Mutiny.Loader", "Tomat.Mutiny.Loader\Tomat.Mutiny.Loader.csproj", "{36FEE569-18BA-4AFD-B0B0-036AE1AF4EEB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +24,5 @@ Global
 		{0A4C97FE-C0C3-495C-A15E-EEAAE06FC63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A4C97FE-C0C3-495C-A15E-EEAAE06FC63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A4C97FE-C0C3-495C-A15E-EEAAE06FC63C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36FEE569-18BA-4AFD-B0B0-036AE1AF4EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36FEE569-18BA-4AFD-B0B0-036AE1AF4EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36FEE569-18BA-4AFD-B0B0-036AE1AF4EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36FEE569-18BA-4AFD-B0B0-036AE1AF4EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
