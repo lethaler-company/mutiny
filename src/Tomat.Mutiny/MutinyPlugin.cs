@@ -1,4 +1,5 @@
 ﻿using Tomat.Mutiny.Loader.API.Plugins;
+using Tomat.Mutiny.Loader.API.Runtimes;
 
 namespace Tomat.Mutiny;
 
@@ -9,5 +10,5 @@ namespace Tomat.Mutiny;
 internal sealed class MutinyPlugin : IPlugin {
     PluginMetadata IPlugin.Metadata { get; set; }
 
-    void IPlugin.OnLoad() { }
+    void IPlugin.OnLoad(IRuntime runtime) { }
 }
